@@ -9,9 +9,31 @@
         <link rel="stylesheet" href="ESTI.css">
 
         <title>Fraces</title>
+        <script type="text/javascript">
+            // declaramos el array con frases ,el número de posiciones es indiferente
+            var Frases=new Array()
+            //primera posición
+            Frases[0] = "Si en los inicios no puedes alimentar a tu equipo con 2 pizzas, es que es demasiado grande – Jeff Bezos de Amazon.";
+            //segunda posición
+            Frases[1] = "El valor de una idea radica en el uso de la misma – Thomas Edison.";
+            //tercer posición
+            Frases[2] = "El trabajo va a ocupar gran parte de tu vida. La única forma de estar realmente satisfecho es hacer aquello que crees que es un buen trabajo, y la única forma de hacer un gran trabajo es amar aquello que haces – Steve Jobs de Apple.";
+            //cuarta posición
+            Frases[3] = "Tus clientes más insatisfechos deben ser tu mayor fuente de aprendizaje – Bill Gates";
+            //quinta posición
+            Frases[4] = "Una visión de una idea sin la capacidad de ejecución es únicamente una alucinación – Steve Case de AOL.";
+            // Calculamos la longitud del array (el resultado será el número de frases)
+            var Q = Frases.length;
+            // Obtener un número aleatorio entre 1 y la cantidad de frases incluidas
+            //Utilizando la clase Math y el método random().
+            var numAleatorio=Math.round(Math.random()*(Q-1));
+            // Creamos una función para mostrar la frase
+            function mostrarFrases() {
+            document.write(Frases[numAleatorio]);}
+            </script>
     </head>
     <body>
-      <p class="fra">Hola Nii-Nii como esats ojala que estes bien muy bien, queria decirte que te qiiero mucho y te valoro</p>
-      <p class="fra2">-Hola Nii-Nii</p>
+        
+        <p class="fra"><script type="text/javascript">mostrarFrases();</script> </p>
     </body>
 </html>
