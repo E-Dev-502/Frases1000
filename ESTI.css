@@ -2,12 +2,14 @@ body{
    background-color: #1a1a1a; 
 }
 .fra{
+   color: FFFFFF;
     font-size: 16px;
     font-family: Arial;
     color: rgb(0, 0, 0);
     text-align:center;
 }
 .fra2{
+   color: FFFFFF;
     font-size: 16px;
     font-family: Arial;
     color: rgb(15, 15, 15);
