@@ -1,80 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-      
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NekoGG</title>
+    <!-- Enlace a Google Fonts para la fuente 'Inter' con un peso de 700 (negrita) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales del cuerpo de la página */
+        body {
+            margin: 0; /* Elimina el margen predeterminado del body */
+            display: flex; /* Usa Flexbox para centrar el contenido */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+            background-color: #1a1a1a; /* Color de fondo oscuro para un contraste elegante */
+            font-family: 'Inter', sans-serif; /* Aplica la fuente Inter */
+            color: #f0f0f0; /* Color de texto claro */
+            overflow: hidden; /* Evita barras de desplazamiento si el contenido excede el tamaño */
+        }
 
-        <!-- ===== CSS ===== -->
-        <style type="text/css">
-            body{
-                background-color: #ffffff; 
+        /* Estilos para el texto "NekoGG" */
+        .nekogg-text {
+            font-size: 10vw; /* Tamaño de fuente responsivo: 10% del ancho del viewport */
+            font-weight: 700; /* Negrita */
+            text-align: center; /* Asegura que el texto esté centrado dentro de su propio contenedor */
+            opacity: 0; /* Inicialmente invisible para el efecto de fade-in */
+            /* Aplica la animación 'fadeIn': dura 1.5s, con una curva de velocidad 'ease-out',
+               y 'forwards' mantiene el estado final de la animación */
+            animation: fadeIn 1.5s ease-out forwards;
+            /* Agrega una sombra suave al texto para un efecto más moderno */
+            text-shadow: 0 0 20px rgba(240, 240, 240, 0.5);
+        }
+
+        /* Definición de la animación 'fadeIn' */
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Empieza completamente transparente */
+                transform: translateY(20px); /* Empieza ligeramente desplazado hacia abajo */
             }
-            .fra{
-                font-size: 16px;
-                font-family: Arial;
-                color: #000000;
-                text-align:center;
+            to {
+                opacity: 1; /* Termina completamente visible */
+                transform: translateY(0); /* Termina en su posición original */
             }
-          </style>
+        }
+    </style>
+</head>
+<body>
+    <div class="nekogg-text">NekoGG</div>
 
-        <title>Fraces</title>
-        <script type="text/javascript">
-            // declaramos el array con frases ,el número de posiciones es indiferente
-            var Frases=new Array()
-            
-            Frases[0] = "Nadie puede entender perfectamente a otra persona, ya es bastante difícil entenderse a uno mismo, tal vez por eso la vida es tan interesante. -Ryoji Kaji";
-            
-            Frases[1] = "Si no tienes recuerdos felices, nunca es tarde para comenzar a construirlos. -Dr. Tenma.";
-            
-            Frases[2] = "La gente necesita el miedo para poder sobrevivir. Lo experimentamos, y así podemos hacernos más fuertes. –Maka";
-            
-            Frases[3] = "Puedes morir en cualquier momento, pero vivir requiere de valentía. –Kenshi Himura";
-            
-            Frases[4] = "Si este es el peor día de tu vida, entonces debes saber que mañana será mejor. –Marco Ikusaba";
-
-            Frases[5] = "Recuerda, en nuestra vida nosotros no somos lectores, sino escritores. –Gintoki";
-
-            Frases[6] = "El amor es como creer en los ovnis, nunca los has visto pero no pierdes la esperanza de verlos. –Minorin";
-
-            Frases[7] = "Tu versión de mañana debería poder vencer a tu versión de hoy. –Saitama";
-
-            Frases[8] = "Las coincidencias no existen, sólo lo inevitable. -Yuuko Xxxholics";
-
-            Frases[9] = "Un héroe es alguien que supera cada obstáculo que la vida pone en su camino. –My Hero Academia";
-
-            Frases[10] = "Incluso si fueses a desviarte del camino correcto, nunca te desvíes de lo que ha decidido tu corazón. –Rin Okumura";
-
-            Frases[11] = "Cuanto mas grande es la dificultad, mas gloria hay en superarla. –Epícuro";
-
-            Frases[12] = "Solo se que no se nada. -Sócrates";
-
-            Frases[13] = "La felicidad no mira donde nace uno, sino adonde puede llegar uno. –Séneca";
-
-            Frases[14] = "No vivas en el pasado, no imagines el futuro, concentra la mente en el momento del presente. –Buda";
-
-            Frases[15] = "Considero más valiente al que conquista sus deseos, que al que conquista a sus enemigos, ya que la victoria más dura es la victoria sobre uno mismo. –Aristóteles";
-
-            Frases[16] = "El sabio puede cambiar de opinión, el necio nunca. –Kant ";
-
-            Frases[17] = "Sin haber conocido la miseria es imposible valorar el lujo. –Charles Chaplin ";
-
-            Frases[18] = "Cuando sientas que vas a rendirte, recuerda porque empezaste. –Piensa en ello";
-
-
-            
-            var Q = Frases.length;
-            // Obtener un número aleatorio entre 1 y la cantidad de frases incluidas
-            //Utilizando la clase Math y el método random().
-            var numAleatorio=Math.round(Math.random()*(Q-1));
-            // Creamos una función para mostrar la frase
-            function mostrarFrases() {
-            document.write(Frases[numAleatorio]);}
-            </script>
-    </head>
-    <body>
-        
-        <p class="fra"><script type="text/javascript">mostrarFrases();</script> </p>
-    </body>
+    <script>
+        // JavaScript para la redirección automática
+        // La función setTimeout ejecuta un código después de un retraso especificado en milisegundos.
+        setTimeout(function() {
+            // Cambia la ubicación del navegador a la nueva URL
+            window.location.href = "https://nekogg.app";
+        }, 3000); // 3000 milisegundos = 3 segundos
+    </script>
+</body>
 </html>
